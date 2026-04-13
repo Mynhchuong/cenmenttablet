@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                     int successCount = 0;
                     for (int i = 0; i < jsonArray.length(); i++) {
                         try {
+                            if (i > 0) Thread.sleep(1100);
                             JSONObject obj = jsonArray.getJSONObject(i);
                             
                             java.net.URL url = new java.net.URL("http://192.168.1.24/SamhoAPI/api/cement/insert");
